@@ -9,7 +9,6 @@
 			<h1>Data Design</h1>
 		</header>
 		<main>
-
 		</main>
 	</body>
 </html>
