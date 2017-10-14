@@ -12,11 +12,21 @@
 			<h2>Entities & Attributes</h2>
 			<h3>Post</h3>
 			<ul>
-				<li></li>
+				<li>postId (Primary key)</li>
+				<li>postTopic</li>
+				<li>postComment</li>
+				<li>postDate</li>
 			</ul>
 			<h3>Comment</h3>
 			<ul>
-				<li></li>
+				<li>commentId (Primary key)</li>
+				<li>commentPostId (Foreign Key)</li>
+				<li>commentContent</li>
+				<li>commentDate</li>
+			</ul>
+			<h2>Relations</h2>
+			<ul>
+				<li>One ‘POST’ can have many ‘Comment’ - (1 - n))</li>
 			</ul>
 		</main>
 	</body>
