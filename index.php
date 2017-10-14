@@ -10,14 +10,14 @@
 		</header>
 		<main>
 			<h2>Entities & Attributes</h2>
-			<h3>Post</h3>
+			<h3>POST</h3>
 			<ul>
 				<li>postId (Primary key)</li>
 				<li>postTopic</li>
 				<li>postComment</li>
 				<li>postDate</li>
 			</ul>
-			<h3>Comment</h3>
+			<h3>COMMENT</h3>
 			<ul>
 				<li>commentId (Primary key)</li>
 				<li>commentPostId (Foreign Key)</li>
@@ -26,7 +26,7 @@
 			</ul>
 			<h2>Relations</h2>
 			<ul>
-				<li>One ‘POST’ can have many ‘Comment’ - (1 - n))</li>
+				<li>One ‘POST’ can have many ‘Comment’ - (1 - n)</li>
 			</ul>
 		</main>
 	</body>
