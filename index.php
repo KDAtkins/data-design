@@ -26,7 +26,7 @@
 			</ul>
 			<h2>Relations</h2>
 			<ul>
-				<li>One ‘POST’ can have many ‘Comment’ - (1 - n)</li>
+				<li>One ‘POST’ can have many ‘COMMENT’ - (1 - n)</li>
 			</ul>
 		</main>
 	</body>
