@@ -10,11 +10,11 @@
 		</header>
 		<main>
 			<h2>Persona</h2>
-			<h3>Jacinta Luxa</h3>
-			<h3>User Story</h3>
-			<p>Jacinta wants to utilize 'Reddit Clone' as a means to find information
+			<p>Jacinta Luxa wants to utilize 'Reddit Clone' as a means to find information
 				on a variety of topics/discussions on message boards.</p>
-			<h3>Use Case/Interaction Flow</h3>
+			<h3>Use Case</h3>
+			<p>Utilizes site to browse/discover/participate in topics and discussions.</p>
+			<h3>Interaction Flow</h3>
 			<ul>
 				<li>Make an user account to log into site</li>
 				<li>Simply login if account already exist</li>
