@@ -23,9 +23,17 @@
 				<li>Once message board is found, or created, post comment/question/reply to post</li>
 			</ul>
 			<h2>Entities & Attributes</h2>
+			<h3>PROFILE</h3>
+			<ul>
+				<li>profileId (Primary key)</li>
+				<li>profileAtHandle</li>
+				<li>profileEmail</li>
+				<li>profilePhone</li>
+			</ul>
 			<h3>POST</h3>
 			<ul>
 				<li>postId (Primary key)</li>
+				<li>postProfileId (Foreign key)</li>
 				<li>postTopic</li>
 				<li>postComment</li>
 				<li>postDate</li>
