@@ -35,7 +35,6 @@
 				<li>postId (Primary key)</li>
 				<li>postProfileId (Foreign key)</li>
 				<li>postTopic</li>
-				<li>postComment</li>
 				<li>postDate</li>
 			</ul>
 			<h3>COMMENT</h3>
