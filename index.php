@@ -26,9 +26,11 @@
 			<h3>PROFILE</h3>
 			<ul>
 				<li>profileId (Primary key)</li>
+				<li>profileActivationToken</li>
 				<li>profileAtHandle</li>
 				<li>profileEmail</li>
-				<li>profilePhone</li>
+				<li>profileHash</li>
+				<li>profileSalt</li>
 			</ul>
 			<h3>POST</h3>
 			<ul>
