@@ -49,8 +49,9 @@
 			</ul>
 			<h2>Relations</h2>
 			<ul>
+				<li>One 'PROFILE' can have many 'POST' - (1 - n)</li>
 				<li>One ‘POST’ can have many ‘COMMENT’ - (1 - n)</li>
-				<li></li>
+				<li>One 'PROFILE' can have many 'COMMENTS'</li>
 			</ul>
 		</main>
 	</body>
