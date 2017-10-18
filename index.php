@@ -10,7 +10,12 @@
 		</header>
 		<main>
 			<h2>Persona</h2>
-			<p>Jacinta Luxa wants to utilize 'Reddit Clone' as a means to find information
+			<p>Jacinta Luxa, a 27-year-old owner of Digital Cafe, is a restless entrepreneur looking to
+				renovate a DIY website that has limitations on how her site engages with customers. She is
+				confident that a full-stack web developer will be able to deliver a site that will meet her
+				expectations and can convey what she is trying to accomplish. The technology she utilizes
+				for her business are: a desktop, tablet, and smartphone. Her primary frustration is trying
+				to attract the millennial demographic. She wants to utilize 'Reddit Clone' as a means to find information
 				on a variety of topics/discussions on message boards.</p>
 			<h3>Use Case</h3>
 			<p>Utilizes site to browse/discover/participate in topics and discussions.</p>
