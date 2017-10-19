@@ -14,7 +14,7 @@
 				renovate a DIY website that has limitations on how her site engages with customers. She is
 				confident that a full-stack web developer will be able to deliver a site that will meet her
 				expectations and can convey what she is trying to accomplish. The technology she utilizes
-				for her business are: a desktop, tablet, and smartphone. Her primary frustration is trying
+				for her business are: an iMac, iPad mini, and iPhone 6s. Her primary frustration is trying
 				to attract the millennial demographic. She wants to utilize 'Reddit Clone' as a means to find information
 				on a variety of topics/discussions on message boards.</p>
 			<h3>Use Case</h3>
@@ -48,7 +48,8 @@
 			<h3>COMMENT</h3>
 			<ul>
 				<li>commentId (Primary key)</li>
-				<li>commentPostId (Foreign Key)</li>
+				<li>commentProfileId (Foreign key)</li>
+				<li>commentPostId (Foreign key)</li>
 				<li>commentContent</li>
 				<li>commentDate</li>
 			</ul>
