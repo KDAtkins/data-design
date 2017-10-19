@@ -43,7 +43,7 @@
 				<li>postProfileId (Foreign key)</li>
 				<li>postTopic</li>
 				<li>postContent</li>
-				<li>postDate</li>
+				<li>postDateTime</li>
 			</ul>
 			<h3>COMMENT</h3>
 			<ul>
@@ -51,7 +51,7 @@
 				<li>commentProfileId (Foreign key)</li>
 				<li>commentPostId (Foreign key)</li>
 				<li>commentContent</li>
-				<li>commentDate</li>
+				<li>commentDateTime</li>
 			</ul>
 			<h2>Relations</h2>
 			<ul>
