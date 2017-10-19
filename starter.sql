@@ -37,6 +37,7 @@ CREATE TABLE comment (
 	-- primary key
 	commentId BINARY(16) NOT NULL,
 	-- foreign key
+	commentProfileId BINARY(16) NOT NULL,
 	commentPostId BINARY(16) NOT NULL,
 	commentContent VARCHAR(400) NOT NULL,
 	commentDate DATETIME(6) NOT NULL,
