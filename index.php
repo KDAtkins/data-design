@@ -60,5 +60,6 @@
 				<li>One 'PROFILE' can have many 'COMMENTS'</li>
 			</ul>
 		</main>
+		<footer></footer>
 	</body>
 </html>
