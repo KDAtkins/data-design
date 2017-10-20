@@ -60,7 +60,7 @@
 				<li>One 'PROFILE' can have many 'COMMENTS'</li>
 			</ul>
 
-			<img src="images/erd.svg">
+			<img src="erd.svg">
 		</main>
 		<footer></footer>
 	</body>
