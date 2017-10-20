@@ -44,6 +44,7 @@ CREATE TABLE comment (
 	INDEX(commentPostId),
 	-- defined foreign key and relation
 	FOREIGN KEY(commentPostId) REFERENCES post(postId),
+	FOREIGN KEY (commentProfileId) REFERENCES profile (profileId),
 	-- defined primary key
 	PRIMARY KEY(commentId)
 );
