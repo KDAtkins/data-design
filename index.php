@@ -59,6 +59,7 @@
 				<li>One ‘POST’ can have many ‘COMMENT’ - (1 - n)</li>
 				<li>One 'PROFILE' can have many 'COMMENTS'</li>
 			</ul>
+			<img src="images/data-design-erd.svg">
 		</main>
 		<footer></footer>
 	</body>
