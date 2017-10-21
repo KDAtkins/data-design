@@ -32,7 +32,14 @@ class Comment {
 	 */
 	private $commentDate;
 
-
+	/**
+	 * Comment constructor.
+	 * @param $newCommentId
+	 * @param $newCommentProfileId
+	 * @param $newCommentPostId
+	 * @param $newCommentContent
+	 * @param $newCommentDate
+	 */
 	public function __construct($newCommentId, $newCommentProfileId, $newCommentPostId, $newCommentContent, $newCommentDate) {
 		try {
 			$this->setCommentId($newCommentId);
