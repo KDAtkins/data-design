@@ -5,7 +5,14 @@
  * Description: Making class for "Profile"
  *
  **/
-class Profile {
+namespace Edu\Cnm\DataDesign;
+
+require_once ("auto_load.php");
+require_once (dirname(__DIR__, 2) . "/vendor/autoload.php");
+
+use Ramsey\Uuid\Uuid;
+
+class Profile implements \JsonSerializable {
 	/**
 	 * id for profile id (primary key)
 	 * @var Uuid $profileID
@@ -60,5 +67,15 @@ class Profile {
 			$exceptionType = get_class($exception);
 			throw(new $exceptionType($exception->getMessage(), 0, $exception));
 		}
+	}
+
+
+	/**
+	 * formats the state variables for JSON serialization
+	 *
+	 * @return array resulting state variables to serialize
+	 */
+	public function jsonSerialize() {
+		// TODO: Implement jsonSerialize() method.
 	}
 }
