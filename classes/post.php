@@ -121,7 +121,7 @@ class Post implements \JsonSerializable {
 	 * @throws \RangeException if $newPostTopic is > 500
 	 * @throws \TypeError if $newPostTopic is not a string
 	 **/
-	public function setPostTopic($newPostTopic) : void {
+	public function setPostTopic(string $newPostTopic) : void {
 		// verify the tweet content is secure
 		$newPostTopic = trim($newPostTopic);
 		$newPostTopic = filter_var($newPostTopic, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
@@ -162,7 +162,7 @@ class Post implements \JsonSerializable {
 		// store the like date using the ValidateDate trait
 		try {
 			$newPostDate = self::validateDateTime($newPostDate);
-		} catch{\InvalidArgumentException | \RangeException $exception} {
+		} catch(\InvalidArgumentException | \RangeException $exception) {
 			$exceptionType = get_class($exception);
 			throw(new $exceptionType($exception->getMessage(), 0, $exception));
 		}
