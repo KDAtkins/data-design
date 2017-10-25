@@ -23,8 +23,7 @@ CREATE TABLE post (
 	postId BINARY(16) NOT NULL,
 	-- foreign key
 	postProfileId BINARY (16) NOT NULL,
-	postTopic VARCHAR(200) NOT NULL,
-	postContent VARCHAR(4000) NOT NULL,
+	postTopic VARCHAR(500) NOT NULL,
 	postDate DATETIME(6) NOT NULL,
 	INDEX(postProfileId),
 	-- defined foreign key and relation

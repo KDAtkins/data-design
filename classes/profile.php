@@ -94,11 +94,9 @@ class Profile implements \JsonSerializable {
 			$exceptionType = get_class($exception);
 			throw (new $exceptionType($exception->getMessage(), 0, $exception));
 		}
-
 		// convert and store the profile id
 		$this->profileID = $uuid;
 	}
-
 	/**
 	 * accesor method for profile activation token
 	 *
@@ -107,7 +105,6 @@ class Profile implements \JsonSerializable {
 	public function getProfileActivationToken() : string {
 		return $this->profileActivationToken;
 	}
-
 	/**
 	 * mutator method for profile activation
 	 *
@@ -116,7 +113,6 @@ class Profile implements \JsonSerializable {
 	public function setProfileActivationToken($newProfileActivation) : void {
 		$this->profileActivationToken = $newProfileActivation;
 	}
-
 	/**
 	 * accessor method for profile at handle
 	 *
@@ -125,7 +121,6 @@ class Profile implements \JsonSerializable {
 	public function getProfileAtHandle() : string {
 		return $this->profileAtHandle;
 	}
-
 	/**
 	 * mutator method for profile at handle
 	 *
@@ -134,7 +129,6 @@ class Profile implements \JsonSerializable {
 	public function setProfileAtHandle($newProfileAtHandle) : void {
 		$this->profileAtHandle = $newProfileAtHandle;
 	}
-
 	/**
 	 * accessor method for profile email
 	 *
@@ -143,7 +137,6 @@ class Profile implements \JsonSerializable {
 	public function getProfileEmail() : string {
 		return $this->profileEmail;
 	}
-
 	/**
 	 * mutator method for profile email
 	 *
@@ -152,7 +145,6 @@ class Profile implements \JsonSerializable {
 	public function setProfileEmail($newProfileEmail) : void {
 		$this->profileEmail = $newProfileEmail;
 	}
-
 	/**
 	 * accessor method for profile hash
 	 *
@@ -161,7 +153,6 @@ class Profile implements \JsonSerializable {
 	public function getProfileHash() : string {
 		return $this->profileHash;
 	}
-
 	/**
 	 * mutator method for profile hash
 	 *
@@ -170,7 +161,6 @@ class Profile implements \JsonSerializable {
 	public function setProfileHash($newProfileHash) : void {
 		$this->profileHash = $newProfileHash;
 	}
-
 	/**
 	 * accessor method for profile salt
 	 *
@@ -179,7 +169,6 @@ class Profile implements \JsonSerializable {
 	public function getProfileSalt() : string {
 		return $this->profileSalt;
 	}
-
 	/**
 	 * mutator method for profile salt
 	 *
@@ -188,7 +177,6 @@ class Profile implements \JsonSerializable {
 	public function setProfileSalt($newProfileSalt) : void {
 		$this->profileSalt = $newProfileSalt;
 	}
-
 	/**
 	 * formats the state variables for JSON serialization
 	 *

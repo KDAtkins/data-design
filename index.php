@@ -42,7 +42,6 @@
 				<li>postId (Primary key)</li>
 				<li>postProfileId (Foreign key)</li>
 				<li>postTopic</li>
-				<li>postContent</li>
 				<li>postDateTime</li>
 			</ul>
 			<h3>COMMENT</h3>
