@@ -8,11 +8,13 @@
 namespace Edu\Cnm\DataDesign;
 
 require_once ("autoload.php");
-require_once (dirname(__DIR__, 2) . "/vendor/autoload.php");
+require_once (dirname(__DIR__, 2) . "../vendor/autoload.php");
 
 use Ramsey\Uuid\Uuid;
 
 class Post implements \JsonSerializable {
+	use ValidateUuid;
+	use ValidateDate;
 	/**
 	 * id for post id (primary key)
 	 * @var Uuid $postId
@@ -409,6 +411,11 @@ class Post implements \JsonSerializable {
 	 * @since 5.4.0
 	 **/
 	public function jsonSerialize() {
-		// TODO: Implement jsonSerialize() method.
+		$fields = get_object_vars($this);
+		$fields["postId"] = $this->postId->toString();
+		$fields["postProfileId"] = $this->postProfileId->toString();
+		//format the date so that the front end can consume it
+		$fields["postDate"] = round(floatval($this->postDate->format("U.u")) * 1000);
+		return($fields);
 	}
 }

@@ -5,7 +5,16 @@
  * Description: Making class for "Comment"
  *
  **/
+namespace Edu\Cnm\DataDesign;
+
+require_once ("autoload.php");
+require_once (dirname(__DIR__, 2) . "../vendor/autoload.php");
+
+use Ramsey\Uuid\Uuid;
+
 class Comment implements \JsonSerializable {
+	use ValidateUuid;
+	use ValidateDate;
 	/**
 	 * id for comment id (primary key)
 	 * @var Uuid $commentId
@@ -77,7 +86,7 @@ class Comment implements \JsonSerializable {
 			throw(new $exceptionType($exception->getMessage(), 0, $exception));
 		}
 		// convert and store the tweet id
-		$this->commentId = $newCommentId;
+		$this->commentId = $uuid;
 	}
 
 	/**
@@ -104,7 +113,7 @@ class Comment implements \JsonSerializable {
 			throw(new $exceptionType($exception->getMessage(), 0, $exception));
 		}
 		// convert and store the comment profile id
-		$this->commentProfileId = $newCommentProfileId;
+		$this->commentProfileId = $uuid;
 	}
 
 	/**
@@ -131,7 +140,7 @@ class Comment implements \JsonSerializable {
 			throw(new $exceptionType($exception->getMessage(), 0, $exception));
 		}
 		// convert and store the comment profile id
-		$this->commentPostId = $newCommentPostId;
+		$this->commentPostId = $uuid;
 	}
 
 	/**
@@ -186,7 +195,7 @@ class Comment implements \JsonSerializable {
 		}
 		// store the like date using the ValidateDate trait
 		try {
-			$newPostDate = self::validateDateTime($newCommentDate);
+			$newCommentDate = self::validateDateTime($newCommentDate);
 		} catch(\InvalidArgumentException | \RangeException $exception) {
 			$exceptionType = get_class($exception);
 			throw(new $exceptionType($exception->getMessage(), 0, $exception));
@@ -248,7 +257,7 @@ class Comment implements \JsonSerializable {
 		$statement->execute($parameters);
 	}
 	/**
-	 * gets the comment by comment Id
+	 * gets the comments by comment Id
 	 *
 	 * @param \PDO $pdo PDO connection object
 	 * @param string $commentId comment id to search for
@@ -286,7 +295,7 @@ class Comment implements \JsonSerializable {
 		return($comment);
 	}
 	/**
-	 * gets the Comments by profile id
+	 * gets the comments by profile id
 	 *
 	 * @param \PDO $pdo PDO connection object
 	 * @param string $commentsProfileId profile id to search by
@@ -372,8 +381,8 @@ class Comment implements \JsonSerializable {
 	 **/
 	public static function getCommentsByCommentsContent(\PDO $pdo, string $commentContent) : \SPLFixedArray {
 		// sanitize the description before searching
-		$commentsContent = trim($commentContent);
-		$commentsContent = filter_var($commentContent, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+		$commentContent = trim($commentContent);
+		$commentContent = filter_var($commentContent, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 		if(empty($commentContent) === true) {
 			throw(new \PDOException("comments content is invalid"));
 		}
@@ -489,6 +498,12 @@ class Comment implements \JsonSerializable {
 	 * @since 5.4.0
 	 **/
 	public function jsonSerialize() {
-		// TODO: Implement jsonSerialize() method.
+		$fields = get_object_vars($this);
+		$fields["commentId"] = $this->commentId->toString();
+		$fields["commentProfileId"] = $this->commentProfileId->toString();
+		$fields["commentPostId"] = $this->commentPostId->toString();
+		//format the date so that the front end can consume it
+		$fields["commentDate"] = round(floatval($this->commentDate->format("U.u")) * 1000);
+		return($fields);
 	}
 }
